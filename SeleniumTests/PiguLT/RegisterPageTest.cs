@@ -18,9 +18,14 @@ namespace SeleniumTests.PiguLT
 
         [Test]
 
-        public void NoRegistration()
-        { 
-        
+        public void FailedLogin()
+        {
+            RegisterPage.ClickDashboardButton();
+            RegisterPage.ClickLogIn();
+            RegisterPage.AddEmail();
+            RegisterPage.AddPassword();
+            RegisterPage.ClickLogIn();
+
         }
     }
 }

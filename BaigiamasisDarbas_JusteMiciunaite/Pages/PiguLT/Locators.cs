@@ -32,8 +32,11 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
         }
 
         internal class Registration
-        { 
-        
+        {
+            internal static string buttonDashboard = "//ul[@class=\"c-user-menu\"]//a//i[@class=\"c-icon--profile\"][1]/parent::a";
+            internal static string buttonLogin;
+            internal static string inputEmail;
+            internal static string inputPassword;
         }
     }
 }

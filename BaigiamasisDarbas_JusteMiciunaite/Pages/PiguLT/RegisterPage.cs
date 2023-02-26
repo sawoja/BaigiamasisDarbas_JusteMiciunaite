@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 
 namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
 {
-    internal class RegisterPage
+    public class RegisterPage
     {
+        
         public static void Open()
         {
             Driver.OpenUrl("https://pigu.lt/lt/");
@@ -19,6 +20,26 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
 
 
 
+        }
+
+        public static void ClickDashboardButton()
+        {
+            Common.ClickElement(Locators.Registration.buttonDashboard);
+        }
+
+        public static void ClickLogIn()
+        {
+            Common.ClickElement(Locators.Registration.buttonLogin);
+        }
+
+        public static void AddEmail()
+        {
+            Common.SendKeys(Locators.Registration.inputEmail, email);
+        }
+
+        public static void AddPassword()
+        {
+            Common.SendKeys(Locators.Registration.inputPassword, password);
         }
     }
 }

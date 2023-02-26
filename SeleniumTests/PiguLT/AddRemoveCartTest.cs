@@ -18,7 +18,6 @@ namespace SeleniumTests.PiguLT
         [Test]
         public void CorrectItemAddedToCart()
         {
-            //string expectedMessage = "Prekė";
             AddRemoveCart.HooverOverItem();
             AddRemoveCart.ClickAddToCartButton();
             AddRemoveCart.ClickButtonBuy();
