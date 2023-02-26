@@ -39,6 +39,15 @@ namespace BaigiamasisDarbas_JusteMiciunaite
         {
             Thread.Sleep(HowManySeconds);
         }
+        public static void Remove(string locator)
+        {
+            GetElement(locator).Click();
+        }
+
+        public static string GetEmptyCartMessage(string locator)
+        {
+            return GetElement(locator).Text;
+        }
 
 
         internal static void ClickElement(string locator)

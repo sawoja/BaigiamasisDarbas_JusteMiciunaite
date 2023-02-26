@@ -18,7 +18,7 @@ namespace SeleniumTests.PiguLT
         [Test]
         public void CorrectItemAddedToCart()
         {
-            string expectedMessage = "Prekė";
+            //string expectedMessage = "Prekė";
             AddRemoveCart.HooverOverItem();
             AddRemoveCart.ClickAddToCartButton();
             AddRemoveCart.ClickButtonBuy();
@@ -27,7 +27,21 @@ namespace SeleniumTests.PiguLT
             //krepselis ne tuscias
             Assert.AreNotEqual(actualMessage, "");
 
-            
+            string quantity = AddRemoveCart.CheckItemQuantity();
+            Assert.AreEqual(quantity, "1");
+            AddRemoveCart.ClickButtonPlusOne();
+
+            string quantityAfter = AddRemoveCart.CheckItemQuantity();
+            Assert.AreEqual(quantityAfter, "2");
+
+            string expectedMessage = "Jūsų prekių krepšelis tuščias";
+            AddRemoveCart.RemoveItems();
+
+            string actualMessage2 = AddRemoveCart.GetEmptyCartMessage();
+            Assert.AreEqual(actualMessage2, expectedMessage);
+
+
+
         }
     }
 }

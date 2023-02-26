@@ -44,7 +44,19 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
         {
             return Common.WaitForElementVisible(Locators.AddToCart.shoppingListNotEmpty, 10);
         }
+        public static string CheckItemQuantity()
+        {
+            return Common.GetAttributeValue(Locators.AddToCart.itemQuantity, "value");    
+        }
+        public static void RemoveItems()
+        {
+            Common.Remove(Locators.AddToCart.buttonRemoveItem);
+        }
 
+        public static string GetEmptyCartMessage() 
+        {
+            return Common.GetEmptyCartMessage(Locators.AddToCart.emptyCartMessage);
+        }
 
 
     }
