@@ -17,15 +17,14 @@ namespace SeleniumTests.PiguLT
         }
 
         [Test]
-
         public void FailedLogin()
         {
             string expectedMessage = "Neteisingi prisijungimo duomenys";
 
             RegisterPage.ClickDashboardButton();
             RegisterPage.ClickLogIn();
-            RegisterPage.AddEmail("emailTest@email.com");
-            RegisterPage.AddPassword("password");
+            RegisterPage.AddEmail("emailTest@email.com", 1);
+            RegisterPage.AddPassword("password", 1);
             RegisterPage.ClickLogIn();
 
             string actualMessage = RegisterPage.RegistrationErrorMessage();
@@ -35,10 +34,20 @@ namespace SeleniumTests.PiguLT
         }
 
         [Test]
-
-        public void SuccesfullLogin() 
+        public void SuccesfullLogin()
         {
-        
+            string expectedMessage = "";
+
+            RegisterPage.ClickDashboardButton();
+            RegisterPage.ClickRegister();
+            RegisterPage.AddEmail("emailTest@email.com", 2);
+            RegisterPage.AddPassword("password", 2);
+            RegisterPage.RepeatPassword("password");
+            RegisterPage.MarkCheckbox();
+            RegisterPage.ClickApprove();
+
+
+            //RegisterPage.ClickLogIn();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
 {
     public class RegisterPage
     {
-        
+
         public static void Open()
         {
             Driver.OpenUrl("https://pigu.lt/lt/");
@@ -32,19 +32,55 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
             Common.ClickElement(Locators.Registration.buttonLogin);
         }
 
-        public static void AddEmail(string email)
+        public static void AddEmail(string email, int regway)
         {
-            Common.SendKeys(Locators.Registration.inputEmail, email);
+            if (regway == 1)
+            {
+                Common.SendKeys(Locators.Registration.inputEmail, email);
+            }
+            else if (regway == 2)
+            {
+                Common.SendKeys(Locators.Registration.inputEmailRegister, email);
+            }
         }
 
-        public static void AddPassword(string password)
+        public static void AddPassword(string password, int regway)
         {
-            Common.SendKeys(Locators.Registration.inputPassword, password);
+            if (regway == 1)
+            {
+                Common.SendKeys(Locators.Registration.inputPassword, password);
+            }
+            else if (regway == 2)
+            {
+                Common.SendKeys(Locators.Registration.inputPasswordRegister, password);
+            }
+
         }
 
         public static string RegistrationErrorMessage()
         {
             return Common.GetElementText(Locators.Registration.errorMessage);
+        }
+
+        public static void ClickRegister()
+        {
+            Common.WaitForElementVisible(Locators.Registration.buttonRegister, 5);
+            Common.ClickElement(Locators.Registration.buttonRegister);
+        }
+
+        public static void RepeatPassword(string password)
+        {
+            Common.SendKeys(Locators.Registration.inputRepeatPassword, password);
+        }
+
+        public static void MarkCheckbox()
+        {
+            Common.ClickElement(Locators.Registration.checkboxTC);
+        }
+
+        public static void ClickApprove()
+        {
+            Common.ClickElement(Locators.Registration.approveButton);
         }
     }
 }

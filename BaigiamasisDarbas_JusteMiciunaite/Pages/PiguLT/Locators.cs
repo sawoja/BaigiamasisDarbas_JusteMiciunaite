@@ -38,6 +38,12 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
             internal static string inputEmail = "//input[@type=\"email\"]";
             internal static string inputPassword = "//div[@class='pg-password-container']/input[@type=\"password\"][@tabindex=\"2\"]";
             internal static string errorMessage = "//div[@class=\"error-message\"]";
+            internal static string buttonRegister = "//a[@rel-widget-id=\"loginModal\"]";
+            internal static string inputRepeatPassword = "//input[@name=\"action\" and @value=\"register\"]/following-sibling::div/div/input[@type=\"password\" and @tabindex=\"3\"]";
+            internal static string checkboxTC = "//div[contains(@class, 'icheckbox') and contains(@class, 'icheck-item')]";
+            internal static string inputEmailRegister = "//input[@name=\"action\" and @value=\"register\"]/following-sibling::div/input[@type=\"email\"]";
+            internal static string inputPasswordRegister = "//input[@name=\"action\" and @value=\"register\"]/following-sibling::div/div/input[@type=\"password\"]";
+            internal static string approveButton = "//a[@id=\"policiesButtonApprove\"]";
         }
     }
 }
