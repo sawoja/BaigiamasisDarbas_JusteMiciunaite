@@ -32,14 +32,19 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
             Common.ClickElement(Locators.Registration.buttonLogin);
         }
 
-        public static void AddEmail()
+        public static void AddEmail(string email)
         {
             Common.SendKeys(Locators.Registration.inputEmail, email);
         }
 
-        public static void AddPassword()
+        public static void AddPassword(string password)
         {
             Common.SendKeys(Locators.Registration.inputPassword, password);
+        }
+
+        public static string RegistrationErrorMessage()
+        {
+            return Common.GetElementText(Locators.Registration.errorMessage);
         }
     }
 }

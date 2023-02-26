@@ -20,11 +20,17 @@ namespace SeleniumTests.PiguLT
 
         public void FailedLogin()
         {
+            string expectedMessage = "Neteisingi prisijungimo duomenys";
+
             RegisterPage.ClickDashboardButton();
             RegisterPage.ClickLogIn();
-            RegisterPage.AddEmail();
-            RegisterPage.AddPassword();
+            RegisterPage.AddEmail("emailTest@email.com");
+            RegisterPage.AddPassword("password");
             RegisterPage.ClickLogIn();
+
+            string actualMessage = RegisterPage.RegistrationErrorMessage();
+
+            Assert.AreEqual(expectedMessage, actualMessage);
 
         }
     }

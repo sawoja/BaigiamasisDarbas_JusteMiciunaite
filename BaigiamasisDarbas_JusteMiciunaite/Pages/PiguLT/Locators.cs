@@ -34,9 +34,10 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
         internal class Registration
         {
             internal static string buttonDashboard = "//ul[@class=\"c-user-menu\"]//a//i[@class=\"c-icon--profile\"][1]/parent::a";
-            internal static string buttonLogin;
-            internal static string inputEmail;
-            internal static string inputPassword;
+            internal static string buttonLogin = "//input[@value=\"Prisijungti\"]";
+            internal static string inputEmail = "//input[@type=\"email\"]";
+            internal static string inputPassword = "//div[@class='pg-password-container']/input[@type=\"password\"][@tabindex=\"2\"]";
+            internal static string errorMessage = "//div[@class=\"error-message\"]";
         }
     }
 }
