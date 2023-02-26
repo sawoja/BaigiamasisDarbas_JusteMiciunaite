@@ -13,7 +13,7 @@ namespace SeleniumTests.PiguLT
 
         public void Open()
         {
-            AddRemoveCart.Open();
+            RegisterPage.Open();
         }
 
         [Test]
@@ -32,6 +32,13 @@ namespace SeleniumTests.PiguLT
 
             Assert.AreEqual(expectedMessage, actualMessage);
 
+        }
+
+        [Test]
+
+        public void SuccesfullLogin() 
+        {
+        
         }
     }
 }
