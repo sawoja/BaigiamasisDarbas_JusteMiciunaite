@@ -11,21 +11,13 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
 {
     internal class RegisterPage
     {
-        [Test]
-        public void SingleInputField()
+        public static void Open()
         {
-            IWebDriver driver = new ChromeDriver();
+            Driver.OpenUrl("https://pigu.lt/lt/");
+            Common.MaximizeWindow();
+            Common.AllowCookies(Locators.AllowCookies.allowCookies);
 
-            driver.Url = "https://demo.seleniumeasy.com/basic-first-form-demo.html";
 
-            string expectedResult = "First field test";
-            IWebElement inputEnterMessage = driver.FindElement(By.XPath("//*[@id='user-message']"));
-            IWebElement buttonShowMessage = driver.FindElement(By.XPath("//*[@id=\"get-input\"]/button"));
-            IWebElement spanMessage = driver.FindElement(By.XPath("//*[@id=\"display\"]"));
-
-            inputEnterMessage.SendKeys(expectedResult);
-            buttonShowMessage.Click();
-            driver.Quit();
 
         }
     }

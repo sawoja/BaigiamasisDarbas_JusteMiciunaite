@@ -30,5 +30,10 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
 
 
         }
+
+        internal class Registration
+        { 
+        
+        }
     }
 }

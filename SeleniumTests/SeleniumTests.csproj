@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="BaseTest\BaseClass.cs" />
     <Compile Include="PiguLT\AddRemoveCartTest.cs" />
+    <Compile Include="PiguLT\RegisterPageTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
