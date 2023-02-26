@@ -49,13 +49,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseTest\Base.cs" />
+    <Compile Include="PiguLT\AddRemoveCartTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PiguLT\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaigiamasisDarbas_JusteMiciunaite\BaigiamasisDarbas_JusteMiciunaite.csproj">
+      <Project>{F2E92F59-0F41-40D3-958A-614EBA189549}</Project>
+      <Name>BaigiamasisDarbas_JusteMiciunaite</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

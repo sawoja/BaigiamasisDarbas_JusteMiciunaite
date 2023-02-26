@@ -55,7 +55,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Driver.cs" />
+    <Compile Include="Pages\Common.cs" />
+    <Compile Include="Pages\PiguLT\AddRemoveCart.cs" />
+    <Compile Include="Pages\PiguLT\Locators.cs" />
     <Compile Include="Pages\PiguLT\RegisterPage.cs" />
+    <Compile Include="Pages\PiguLT\SearchForItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
