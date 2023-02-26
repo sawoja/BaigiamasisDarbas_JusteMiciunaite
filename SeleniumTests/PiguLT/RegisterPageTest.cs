@@ -34,7 +34,7 @@ namespace SeleniumTests.PiguLT
         }
 
         [Test]
-        public void SuccesfullLogin()
+        public void SuccesfullRegistration()
         {
             string expectedMessage = "";
 
