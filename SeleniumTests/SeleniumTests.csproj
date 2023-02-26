@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseTest\Base.cs" />
+    <Compile Include="BaseTest\BaseClass.cs" />
     <Compile Include="PiguLT\AddRemoveCartTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

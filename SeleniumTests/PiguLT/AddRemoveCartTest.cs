@@ -1,5 +1,6 @@
 ﻿using BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT;
 using NUnit.Framework;
+using SeleniumTests.BaseClass;
 
 namespace SeleniumTests.PiguLT
 {
@@ -11,6 +12,8 @@ namespace SeleniumTests.PiguLT
         {
             AddRemoveCart.Open();
         }
-        
+        [Test]
+
+        public void 
     }
 }
