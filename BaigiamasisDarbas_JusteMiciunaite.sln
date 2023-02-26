@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaigiamasisDarbas_JusteMiciunaite", "BaigiamasisDarbas_JusteMiciunaite\BaigiamasisDarbas_JusteMiciunaite.csproj", "{F2E92F59-0F41-40D3-958A-614EBA189549}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumTests", "SeleniumTests\SeleniumTests.csproj", "{DF758270-25E0-4F5B-A4AD-6E34972A8031}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F2E92F59-0F41-40D3-958A-614EBA189549}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2E92F59-0F41-40D3-958A-614EBA189549}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2E92F59-0F41-40D3-958A-614EBA189549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF758270-25E0-4F5B-A4AD-6E34972A8031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF758270-25E0-4F5B-A4AD-6E34972A8031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF758270-25E0-4F5B-A4AD-6E34972A8031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF758270-25E0-4F5B-A4AD-6E34972A8031}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

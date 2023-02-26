@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BaigiamasisDarbas_JusteMiciunaite
 {
-    public class Class1
+    internal class Driver
     {
     }
 }
