@@ -39,5 +39,15 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
         {
             Common.ClickElement(Locators.ItemSearch.clearButton);
         }
+
+        public static string ItemNotFound()
+        {
+            return Common.GetElementText(Locators.ItemSearch.messageItemNotFound);
+        }
+
+        public static void RemoveBadPhrase()
+        {
+            Common.ClickElement(Locators.ItemSearch.removePhrase);
+        }
     }
 }

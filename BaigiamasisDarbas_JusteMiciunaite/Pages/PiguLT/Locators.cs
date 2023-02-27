@@ -55,6 +55,8 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
             internal static string quickDeliveryCheckbox = "//label[@for='item445515819879']";
             internal static string messageActiveFilters = "//div[@class='title dtc']";
             internal static string clearButton = "//a[@widget-attachpoint='clear']";
+            internal static string messageItemNotFound = "//*[@id='searchContent']/div/div/section/div/h2";
+            internal static string removePhrase = "//i[@class='c-icon--close']";
         }
     }
 }

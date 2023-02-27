@@ -29,5 +29,20 @@ namespace SeleniumTests.PiguLT
 
             SearchForItem.ClearActiveFilters();
         }
+
+        [Test]
+        public void UnsuccessfullSearch()
+        {
+            string expectedMessage = "Pagal Jūsų ieškotą frazę prekių nebuvo rasta.";
+
+            SearchForItem.EnterSearchPhrase("asdfgh123");
+            SearchForItem.ClickSearchButton();
+
+            string actualMessage = SearchForItem.ItemNotFound();
+
+            Assert.AreEqual(expectedMessage, actualMessage);
+
+            SearchForItem.RemoveBadPhrase();
+        }
     }
 }
