@@ -1,5 +1,6 @@
 ﻿using BaigiamasisDarbas_JusteMiciunaite;
 using NUnit.Framework;
+using NUnit.Framework.Interfaces;
 
 namespace SeleniumTests.BaseClass
 {
@@ -11,10 +12,11 @@ namespace SeleniumTests.BaseClass
             Driver.SetupDriver();
         }
 
+
         [TearDown]
         public void TearDown()
         {
             Driver.QuitDriver();
-        }
+        } 
     }
 }

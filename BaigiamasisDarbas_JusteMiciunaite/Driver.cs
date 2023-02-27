@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.Extensions;
 
 namespace BaigiamasisDarbas_JusteMiciunaite
 {
@@ -26,5 +27,11 @@ namespace BaigiamasisDarbas_JusteMiciunaite
         {
             driver.Quit();
         }
+
+        //public static Screenshot Screenshot() 
+        //{
+        //    return driver.TakeScreenshot();
+        //}
+
     }
 }
