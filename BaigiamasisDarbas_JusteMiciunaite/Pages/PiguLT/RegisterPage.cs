@@ -61,11 +61,20 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
         {
             return Common.GetElementText(Locators.Registration.errorMessage);
         }
+        public static string RegistrationSuccessMessage()
+        {
+            return Common.GetElementText(Locators.Registration.messageSuccessfull);
+        }
 
         public static void ClickRegister()
         {
             Common.WaitForElementVisible(Locators.Registration.buttonRegister, 5);
             Common.ClickElement(Locators.Registration.buttonRegister);
+        }
+        public static void ConfirmRegister()
+        {
+            Common.WaitForElementVisible(Locators.Registration.buttonFinalRegister, 5);
+            Common.ClickElement(Locators.Registration.buttonFinalRegister);
         }
 
         public static void RepeatPassword(string password)
@@ -82,5 +91,6 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
         {
             Common.ClickElement(Locators.Registration.approveButton);
         }
+
     }
 }

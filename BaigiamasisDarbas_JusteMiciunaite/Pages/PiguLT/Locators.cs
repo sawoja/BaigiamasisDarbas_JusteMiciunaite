@@ -44,6 +44,8 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
             internal static string inputEmailRegister = "//input[@name=\"action\" and @value=\"register\"]/following-sibling::div/input[@type=\"email\"]";
             internal static string inputPasswordRegister = "//input[@name=\"action\" and @value=\"register\"]/following-sibling::div/div/input[@type=\"password\"]";
             internal static string approveButton = "//a[@id=\"policiesButtonApprove\"]";
+            internal static string buttonFinalRegister = "//input[@name=\"register\"]";
+            internal static string messageSuccessfull = "//div[@class=\"notification success mb20\"]";
         }
     }
 }
