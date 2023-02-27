@@ -33,19 +33,28 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
 
         internal class Registration
         {
-            internal static string buttonDashboard = "//ul[@class=\"c-user-menu\"]//a//i[@class=\"c-icon--profile\"][1]/parent::a";
-            internal static string buttonLogin = "//input[@value=\"Prisijungti\"]";
-            internal static string inputEmail = "//input[@type=\"email\"]";
-            internal static string inputPassword = "//div[@class='pg-password-container']/input[@type=\"password\"][@tabindex=\"2\"]";
-            internal static string errorMessage = "//div[@class=\"error-message\"]";
-            internal static string buttonRegister = "//a[@rel-widget-id=\"loginModal\"]";
-            internal static string inputRepeatPassword = "//input[@name=\"action\" and @value=\"register\"]/following-sibling::div/div/input[@type=\"password\" and @tabindex=\"3\"]";
+            internal static string buttonDashboard = "//ul[@class='c-user-menu']//a//i[@class='c-icon--profile'][1]/parent::a";
+            internal static string buttonLogin = "//input[@value='Prisijungti']";
+            internal static string inputEmail = "//input[@type='email']";
+            internal static string inputPassword = "//div[@class='pg-password-container']/input[@type='password'][@tabindex='2']";
+            internal static string errorMessage = "//div[@class='error-message']";
+            internal static string buttonRegister = "//a[@rel-widget-id='loginModal']";
+            internal static string inputRepeatPassword = "//input[@name='action' and @value='register']/following-sibling::div/div/input[@type='password' and @tabindex='3']";
             internal static string checkboxTC = "//div[contains(@class, 'icheckbox') and contains(@class, 'icheck-item')]";
-            internal static string inputEmailRegister = "//input[@name=\"action\" and @value=\"register\"]/following-sibling::div/input[@type=\"email\"]";
-            internal static string inputPasswordRegister = "//input[@name=\"action\" and @value=\"register\"]/following-sibling::div/div/input[@type=\"password\"]";
-            internal static string approveButton = "//a[@id=\"policiesButtonApprove\"]";
-            internal static string buttonFinalRegister = "//input[@name=\"register\"]";
-            internal static string messageSuccessfull = "//div[@class=\"notification success mb20\"]";
+            internal static string inputEmailRegister = "//input[@name='action' and @value='register']/following-sibling::div/input[@type='email']";
+            internal static string inputPasswordRegister = "//input[@name='action' and @value='register']/following-sibling::div/div/input[@type='password']";
+            internal static string approveButton = "//a[@id='policiesButtonApprove']";
+            internal static string buttonFinalRegister = "//input[@name='register']";
+            internal static string messageSuccessfull = "//div[@class='notification success mb20']";
+        }
+
+        internal class ItemSearch
+        {
+            internal static string searchButton = "//i[@class='c-icon--search']";
+            internal static string inputSearchPhrase = "//input[@itemprop='query-input']";
+            internal static string quickDeliveryCheckbox = "//label[@for='item445515819879']";
+            internal static string messageActiveFilters = "//div[@class='title dtc']";
+            internal static string clearButton = "//a[@widget-attachpoint='clear']";
         }
     }
 }

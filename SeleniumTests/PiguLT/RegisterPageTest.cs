@@ -54,6 +54,6 @@ namespace SeleniumTests.PiguLT
 
             Assert.AreEqual(expectedMessage, actualMessage);
 
-            }
+        }
     }
 }

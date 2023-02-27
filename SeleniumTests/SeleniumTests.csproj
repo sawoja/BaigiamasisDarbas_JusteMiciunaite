@@ -51,6 +51,7 @@
     <Compile Include="BaseTest\BaseClass.cs" />
     <Compile Include="PiguLT\AddRemoveCartTest.cs" />
     <Compile Include="PiguLT\RegisterPageTest.cs" />
+    <Compile Include="PiguLT\SearchForItemTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

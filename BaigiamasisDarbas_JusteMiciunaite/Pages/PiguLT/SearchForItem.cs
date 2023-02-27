@@ -6,7 +6,38 @@ using System.Threading.Tasks;
 
 namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
 {
-    internal class SearchForItem
+    public class SearchForItem
     {
+        public static void Open()
+        {
+            Driver.OpenUrl("https://pigu.lt/lt/");
+            Common.MaximizeWindow();
+            Common.AllowCookies(Locators.AllowCookies.allowCookies);
+
+        }
+
+        public static void EnterSearchPhrase(string phrase)
+        {
+            Common.SendKeys(Locators.ItemSearch.inputSearchPhrase, phrase);
+        }
+        public static void ClickSearchButton()
+        {
+            Common.ClickElement(Locators.ItemSearch.searchButton);
+        }
+
+        public static void ClickQuickDelivery()
+        {
+            Common.ClickElement(Locators.ItemSearch.quickDeliveryCheckbox);
+        }
+
+        public static string ActiveFilter()
+        {
+            return Common.GetElementText(Locators.ItemSearch.messageActiveFilters);
+        }
+
+        public static void ClearActiveFilters()
+        {
+            Common.ClickElement(Locators.ItemSearch.clearButton);
+        }
     }
 }
