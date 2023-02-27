@@ -52,7 +52,7 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
         {
             internal static string searchButton = "//i[@class='c-icon--search']";
             internal static string inputSearchPhrase = "//input[@itemprop='query-input']";
-            internal static string quickDeliveryCheckbox = "//label[@for='item445515819879']";
+            internal static string quickDeliveryCheckbox = "//a[@class='c-checkbox filter-with-label '][@data-href='/lt/saldytuvai?f[44551][5819879]=greitas-pristatymas']";
             internal static string messageActiveFilters = "//div[@class='title dtc']";
             internal static string clearButton = "//a[@widget-attachpoint='clear']";
             internal static string messageItemNotFound = "//*[@id='searchContent']/div/div/section/div/h2";
