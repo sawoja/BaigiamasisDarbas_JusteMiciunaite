@@ -1,6 +1,8 @@
 ﻿using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Extensions;
+using System;
+using System.IO;
 
 namespace BaigiamasisDarbas_JusteMiciunaite
 {
@@ -28,10 +30,16 @@ namespace BaigiamasisDarbas_JusteMiciunaite
             driver.Quit();
         }
 
-        //public static Screenshot Screenshot() 
-        //{
-        //    return driver.TakeScreenshot();
-        //}
+        public static void TakeScreenshot()
+        {
+            string screenshotsDirectory = $"{AppDomain.CurrentDomain.BaseDirectory}screenshots";
+            string screenshotName = $"screenshot_{Guid.NewGuid()}.png";
+            string screenshotFilePath = $"{screenshotsDirectory}\\{screenshotName}";
+
+            Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+            Directory.CreateDirectory(screenshotsDirectory);
+            screenshot.SaveAsFile(screenshotFilePath, ScreenshotImageFormat.Png);
+        }
 
     }
 }
