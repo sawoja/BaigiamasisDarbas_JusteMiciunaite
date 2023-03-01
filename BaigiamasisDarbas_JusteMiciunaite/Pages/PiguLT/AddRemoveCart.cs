@@ -13,6 +13,7 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
 
         public static void ClickAddToCartButton()
         {
+            HooverOverItem();
             Common.ClickElement(Locators.AddToCart.buttonAddToCartWhiteSofa);
         }
         public static void ClickButtonBuy()

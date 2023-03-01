@@ -16,7 +16,6 @@ namespace SeleniumTests.PiguLT
         [Test]
         public void CorrectItemAddedToCart()
         {
-            AddRemoveCart.HooverOverItem();
             AddRemoveCart.ClickAddToCartButton();
             AddRemoveCart.ClickButtonBuy();
 
