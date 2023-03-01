@@ -38,7 +38,8 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
 
         public static string ShoppingCartNotEmpty()
         {
-            return Common.WaitForElementVisible(Locators.AddToCart.shoppingListNotEmpty, 10);
+            Common.WaitForElementVisible(Locators.AddToCart.shoppingListNotEmpty, 10);
+            return Common.GetElementText(Locators.AddToCart.shoppingListNotEmpty);
         }
 
         public static string CheckItemQuantity()
