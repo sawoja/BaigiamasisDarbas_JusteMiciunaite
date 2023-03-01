@@ -40,11 +40,9 @@ namespace BaigiamasisDarbas_JusteMiciunaite
             return GetElement(locator).Text;
         }
 
-
         internal static void ClickElement(string locator)
         {
-            IWebElement elmnt = GetElement(locator);
-            elmnt.Click();
+            GetElement(locator).Click();
         }
         internal static string GetElementText(string locator)
         {
