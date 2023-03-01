@@ -5,7 +5,7 @@
         public static void Open()
         {
             Driver.OpenUrl("https://pigu.lt/lt/");
-            Common.AllowCookies(Locators.AllowCookies.allowCookies);
+            Common.ClickElement(Locators.AllowCookies.allowCookies);
         }
 
         public static void ClickDashboardButton()

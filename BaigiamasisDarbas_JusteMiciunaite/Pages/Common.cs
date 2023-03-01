@@ -2,7 +2,6 @@
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Threading;
 
 namespace BaigiamasisDarbas_JusteMiciunaite
 {
@@ -30,11 +29,6 @@ namespace BaigiamasisDarbas_JusteMiciunaite
             return GetElement(locator).Text;
         }
 
-        public static void Remove(string locator)
-        {
-            GetElement(locator).Click();
-        }
-
         public static string GetEmptyCartMessage(string locator)
         {
             return GetElement(locator).Text;
@@ -44,6 +38,7 @@ namespace BaigiamasisDarbas_JusteMiciunaite
         {
             GetElement(locator).Click();
         }
+
         internal static string GetElementText(string locator)
         {
             return GetElement(locator).Text;

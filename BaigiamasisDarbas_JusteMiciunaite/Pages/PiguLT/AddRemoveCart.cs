@@ -7,7 +7,7 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
         public static void Open()
         {
             Driver.OpenUrl("https://pigu.lt/lt/sofos");
-            Common.AllowCookies(Locators.AllowCookies.allowCookies);
+            Common.ClickElement(Locators.AllowCookies.allowCookies);
         }
 
         public static void ClickAddToCartButton()
@@ -49,7 +49,7 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
         public static void RemoveItems()
         {
             Common.WaitForElementVisible(Locators.AddToCart.buttonRemoveItem, 5);
-            Common.Remove(Locators.AddToCart.buttonRemoveItem);
+            Common.ClickElement(Locators.AddToCart.buttonRemoveItem);
         }
 
         public static string GetEmptyCartMessage()
