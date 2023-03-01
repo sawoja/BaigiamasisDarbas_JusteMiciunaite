@@ -2,6 +2,12 @@
 {
     public class RegisterPage
     {
+        public enum RegistrationAction
+        {
+            Register,
+            Login
+        }
+
         public static void Open()
         {
             Driver.OpenUrl("https://pigu.lt/lt/");
@@ -18,28 +24,38 @@
             Common.ClickElement(Locators.Registration.buttonLogin);
         }
         
-        public static void AddEmail(string email, int regway)
+        public static void AddEmail(string email, RegistrationAction action)
         {
-            if (regway == 1)
+            string locator = "";
+
+            switch (action)
             {
-                Common.SendKeys(Locators.Registration.inputEmail, email);
+                case RegistrationAction.Login:
+                    locator = Locators.Registration.inputEmail;
+                    break;
+                case RegistrationAction.Register:
+                    locator = Locators.Registration.inputEmailRegister;
+                    break;
             }
-            else if (regway == 2)
-            {
-                Common.SendKeys(Locators.Registration.inputEmailRegister, email);
-            }
+
+            Common.SendKeys(locator, email);
         }
 
-        public static void AddPassword(string password, int regway)
+        public static void AddPassword(string password, RegistrationAction action)
         {
-            if (regway == 1)
+            string locator = "";
+
+            switch (action)
             {
-                Common.SendKeys(Locators.Registration.inputPassword, password);
+                case RegistrationAction.Login:
+                    locator = Locators.Registration.inputPassword;
+                    break;
+                case RegistrationAction.Register:
+                    locator = Locators.Registration.inputPasswordRegister;
+                    break;
             }
-            else if (regway == 2)
-            {
-                Common.SendKeys(Locators.Registration.inputPasswordRegister, password);
-            }
+
+            Common.SendKeys(locator, password);
         }
 
         public static string RegistrationErrorMessage()

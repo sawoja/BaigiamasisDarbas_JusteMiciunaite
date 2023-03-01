@@ -22,8 +22,8 @@ namespace SeleniumTests.PiguLT
 
             RegisterPage.ClickDashboardButton();
             RegisterPage.ClickLogIn();
-            RegisterPage.AddEmail("emailTest@email.com", 1);
-            RegisterPage.AddPassword("password", 1);
+            RegisterPage.AddEmail("emailTest@email.com", RegisterPage.RegistrationAction.Login);
+            RegisterPage.AddPassword("password", RegisterPage.RegistrationAction.Login);
             RegisterPage.ClickLogIn();
 
             string actualMessage = RegisterPage.RegistrationErrorMessage();
@@ -41,8 +41,8 @@ namespace SeleniumTests.PiguLT
 
             RegisterPage.ClickDashboardButton();
             RegisterPage.ClickRegister();
-            RegisterPage.AddEmail("emailTest+" + skaicius + "@email.com", 2);
-            RegisterPage.AddPassword("password", 2);
+            RegisterPage.AddEmail("emailTest+" + skaicius + "@email.com", RegisterPage.RegistrationAction.Register);
+            RegisterPage.AddPassword("password", RegisterPage.RegistrationAction.Register);
             RegisterPage.RepeatPassword("password");
             RegisterPage.MarkCheckbox();
             RegisterPage.ClickApprove();
