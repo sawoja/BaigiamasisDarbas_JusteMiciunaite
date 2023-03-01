@@ -11,7 +11,6 @@ namespace BaigiamasisDarbas_JusteMiciunaite
         internal static IWebElement GetElement(string locator)
         {
             IWebDriver drv = Driver.GetDriver();
-            string page = drv.PageSource;
             return drv.FindElement(By.XPath(locator));
         }
         internal static void AllowCookies(string locator)
