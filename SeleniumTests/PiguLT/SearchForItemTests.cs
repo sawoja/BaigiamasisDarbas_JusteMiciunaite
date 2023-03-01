@@ -1,8 +1,6 @@
-﻿using BaigiamasisDarbas_JusteMiciunaite;
-using BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT;
+﻿using BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT;
 using NUnit.Framework;
 using SeleniumTests.BaseClass;
-using System;
 
 namespace SeleniumTests.PiguLT
 {
@@ -14,6 +12,7 @@ namespace SeleniumTests.PiguLT
         {
             SearchForItem.Open();
         }
+
         [Test]
         public void SuccessfullSearch()
         {

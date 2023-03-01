@@ -47,3 +47,4 @@ _Scenarijus - Paieškos tikrinimas._
    2. žingsnis – paspausti 'icon'ą "Ieškoti".
       - Patikrinti ar tikrai nebuvo rasta jokių paieškos rezultatų.
    3. žingsnis – išvalyti paieškos lauką.
+

@@ -1,7 +1,6 @@
 ﻿using BaigiamasisDarbas_JusteMiciunaite;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
-using System;
 
 namespace SeleniumTests.BaseClass
 {
@@ -19,7 +18,6 @@ namespace SeleniumTests.BaseClass
         {
             if (TestContext.CurrentContext.Result.Outcome != ResultState.Success)
             {
-
                 Driver.TakeScreenshot();
             }
             Driver.QuitDriver();

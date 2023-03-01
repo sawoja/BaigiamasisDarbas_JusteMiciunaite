@@ -1,8 +1,6 @@
-﻿using BaigiamasisDarbas_JusteMiciunaite;
-using BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT;
+﻿using BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT;
 using NUnit.Framework;
 using SeleniumTests.BaseClass;
-using System;
 
 namespace SeleniumTests.PiguLT
 {
@@ -18,7 +16,6 @@ namespace SeleniumTests.PiguLT
         [Test]
         public void CorrectItemAddedToCart()
         {
-            AddRemoveCart.HooverOverItem();
             AddRemoveCart.ClickAddToCartButton();
             AddRemoveCart.ClickButtonBuy();
 
@@ -38,9 +35,6 @@ namespace SeleniumTests.PiguLT
 
             string actualMessage2 = AddRemoveCart.GetEmptyCartMessage();
             Assert.AreEqual(actualMessage2, expectedMessage);
-
-
-
         }
     }
 }

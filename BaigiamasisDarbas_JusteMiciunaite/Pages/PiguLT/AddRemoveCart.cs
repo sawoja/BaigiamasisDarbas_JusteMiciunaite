@@ -1,25 +1,19 @@
-﻿using System;
-
-namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
+﻿namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
 {
     public class AddRemoveCart
     {
         public static void Open()
         {
             Driver.OpenUrl("https://pigu.lt/lt/sofos");
-            Common.MaximizeWindow();
-            Common.AllowCookies(Locators.AllowCookies.allowCookies);
-
-
-
+            Common.ClickElement(Locators.AllowCookies.allowCookies);
         }
-
-
 
         public static void ClickAddToCartButton()
         {
+            HooverOverItem();
             Common.ClickElement(Locators.AddToCart.buttonAddToCartWhiteSofa);
         }
+
         public static void ClickButtonBuy()
         {
             Common.WaitForElementVisible(Locators.AddToCart.buttonBuy, 10);
@@ -30,6 +24,7 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
         {
             Common.ClickElement(Locators.AddToCart.buttonPlusOne);
         }
+
         public static void ClickButtonRemoveItem()
         {
             Common.ClickElement(Locators.AddToCart.buttonRemoveItem);
@@ -42,24 +37,25 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
 
         public static string ShoppingCartNotEmpty()
         {
-            return Common.WaitForElementVisible(Locators.AddToCart.shoppingListNotEmpty, 10);
+            Common.WaitForElementVisible(Locators.AddToCart.shoppingListNotEmpty, 10);
+            return Common.GetElementText(Locators.AddToCart.shoppingListNotEmpty);
         }
+
         public static string CheckItemQuantity()
         {
             return Common.GetAttributeValue(Locators.AddToCart.itemQuantity, "value");
         }
+
         public static void RemoveItems()
         {
-            Common.WaitForElementVisible(Locators.AddToCart.buttonRemoveItem, 5);
-            Common.Remove(Locators.AddToCart.buttonRemoveItem);
+            Common.WaitForElementToBeInvisible("//*[@class='loader-overlay']", 5);
+            Common.ClickElement(Locators.AddToCart.buttonRemoveItem);
         }
 
         public static string GetEmptyCartMessage()
         {
-            return Common.GetEmptyCartMessage(Locators.AddToCart.emptyCartMessage);
+            Common.WaitForElementVisible(Locators.AddToCart.emptyCartMessage, 5);
+            return Common.GetElementText(Locators.AddToCart.emptyCartMessage);
         }
-
-
     }
-
 }
