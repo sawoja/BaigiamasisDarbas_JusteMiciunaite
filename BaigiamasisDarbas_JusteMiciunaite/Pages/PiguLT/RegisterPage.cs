@@ -46,6 +46,7 @@
         {
             return Common.GetElementText(Locators.Registration.errorMessage);
         }
+
         public static string RegistrationSuccessMessage()
         {
             return Common.GetElementText(Locators.Registration.messageSuccessfull);
@@ -56,6 +57,7 @@
             Common.WaitForElementVisible(Locators.Registration.buttonRegister, 5);
             Common.ClickElement(Locators.Registration.buttonRegister);
         }
+
         public static void ConfirmRegister()
         {
             Common.WaitForElementVisible(Locators.Registration.buttonFinalRegister, 5);
@@ -76,6 +78,5 @@
         {
             Common.ClickElement(Locators.Registration.approveButton);
         }
-
     }
 }

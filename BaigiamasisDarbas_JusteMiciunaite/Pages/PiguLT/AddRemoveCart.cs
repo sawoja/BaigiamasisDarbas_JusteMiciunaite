@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
+﻿namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
 {
     public class AddRemoveCart
     {
@@ -15,6 +13,7 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
             HooverOverItem();
             Common.ClickElement(Locators.AddToCart.buttonAddToCartWhiteSofa);
         }
+
         public static void ClickButtonBuy()
         {
             Common.WaitForElementVisible(Locators.AddToCart.buttonBuy, 10);
