@@ -7,7 +7,6 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
         public static void Open()
         {
             Driver.OpenUrl("https://pigu.lt/lt/sofos");
-            Common.MaximizeWindow();
             Common.AllowCookies(Locators.AllowCookies.allowCookies);
         }
 

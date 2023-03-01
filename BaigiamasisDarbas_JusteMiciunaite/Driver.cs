@@ -12,6 +12,7 @@ namespace BaigiamasisDarbas_JusteMiciunaite
         public static void SetupDriver()
         {
             driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();
         }
 
         public static IWebDriver GetDriver()

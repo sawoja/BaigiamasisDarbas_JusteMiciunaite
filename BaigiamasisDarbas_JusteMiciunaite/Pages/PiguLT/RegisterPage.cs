@@ -5,7 +5,6 @@
         public static void Open()
         {
             Driver.OpenUrl("https://pigu.lt/lt/");
-            Common.MaximizeWindow();
             Common.AllowCookies(Locators.AllowCookies.allowCookies);
         }
 
