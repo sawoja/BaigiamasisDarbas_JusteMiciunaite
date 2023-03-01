@@ -1,25 +1,12 @@
-﻿using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
+﻿namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
 {
     public class RegisterPage
     {
-
         public static void Open()
         {
             Driver.OpenUrl("https://pigu.lt/lt/");
             Common.MaximizeWindow();
             Common.AllowCookies(Locators.AllowCookies.allowCookies);
-
-
-
         }
 
         public static void ClickDashboardButton()
@@ -31,7 +18,7 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
         {
             Common.ClickElement(Locators.Registration.buttonLogin);
         }
-
+        
         public static void AddEmail(string email, int regway)
         {
             if (regway == 1)
@@ -54,7 +41,6 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
             {
                 Common.SendKeys(Locators.Registration.inputPasswordRegister, password);
             }
-
         }
 
         public static string RegistrationErrorMessage()

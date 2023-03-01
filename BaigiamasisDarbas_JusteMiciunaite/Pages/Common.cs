@@ -8,11 +8,11 @@ namespace BaigiamasisDarbas_JusteMiciunaite
 {
     public class Common
     {
-
         internal static void MaximizeWindow()
         {
             Driver.GetDriver().Manage().Window.Maximize();
         }
+
         internal static IWebElement GetElement(string locator)
         {
             IWebDriver drv = Driver.GetDriver();

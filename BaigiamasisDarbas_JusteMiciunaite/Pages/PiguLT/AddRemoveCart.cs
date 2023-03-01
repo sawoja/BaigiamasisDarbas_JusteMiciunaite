@@ -9,12 +9,7 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
             Driver.OpenUrl("https://pigu.lt/lt/sofos");
             Common.MaximizeWindow();
             Common.AllowCookies(Locators.AllowCookies.allowCookies);
-
-
-
         }
-
-
 
         public static void ClickAddToCartButton()
         {
@@ -30,6 +25,7 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
         {
             Common.ClickElement(Locators.AddToCart.buttonPlusOne);
         }
+
         public static void ClickButtonRemoveItem()
         {
             Common.ClickElement(Locators.AddToCart.buttonRemoveItem);
@@ -44,10 +40,12 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
         {
             return Common.WaitForElementVisible(Locators.AddToCart.shoppingListNotEmpty, 10);
         }
+
         public static string CheckItemQuantity()
         {
             return Common.GetAttributeValue(Locators.AddToCart.itemQuantity, "value");
         }
+
         public static void RemoveItems()
         {
             Common.WaitForElementVisible(Locators.AddToCart.buttonRemoveItem, 5);
@@ -58,8 +56,5 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
         {
             return Common.GetEmptyCartMessage(Locators.AddToCart.emptyCartMessage);
         }
-
-
     }
-
 }
