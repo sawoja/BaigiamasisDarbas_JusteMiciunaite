@@ -1,4 +1,6 @@
-﻿namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
+﻿using System;
+
+namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
 {
     public class RegisterPage
     {
@@ -93,6 +95,11 @@
         public static void ClickApprove()
         {
             Common.ClickElement(Locators.Registration.approveButton);
+        }
+
+        public static string GenerateEmail()
+        {
+            return $"email{Guid.NewGuid()}@email.com";
         }
     }
 }

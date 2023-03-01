@@ -34,14 +34,12 @@ namespace SeleniumTests.PiguLT
         [Test]
         public void SuccesfullRegistration()
         {
-            Random rnd = new Random();
-            int skaicius = rnd.Next(1, 10);
-
-            string expectedMessage = "Vienkartinis 6 skaitmenų patvirtinimo kodas išsiųstas adresu: emailTest+" + skaicius + "@email.com\r\nKeisti el. pašto adresą";
+            string email = RegisterPage.GenerateEmail();
+            string expectedMessage = $"Vienkartinis 6 skaitmenų patvirtinimo kodas išsiųstas adresu: {email}\r\nKeisti el. pašto adresą";
 
             RegisterPage.ClickDashboardButton();
             RegisterPage.ClickRegister();
-            RegisterPage.AddEmail("emailTest+" + skaicius + "@email.com", RegisterPage.RegistrationAction.Register);
+            RegisterPage.AddEmail(email, RegisterPage.RegistrationAction.Register);
             RegisterPage.AddPassword("password", RegisterPage.RegistrationAction.Register);
             RegisterPage.RepeatPassword("password");
             RegisterPage.MarkCheckbox();
