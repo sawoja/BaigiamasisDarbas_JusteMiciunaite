@@ -27,11 +27,6 @@ namespace BaigiamasisDarbas_JusteMiciunaite
             return GetElement(locator).Text;
         }
 
-        public static string GetEmptyCartMessage(string locator)
-        {
-            return GetElement(locator).Text;
-        }
-
         internal static void ClickElement(string locator)
         {
             GetElement(locator).Click();
@@ -55,11 +50,6 @@ namespace BaigiamasisDarbas_JusteMiciunaite
         internal static string SendKeys(string valueInputNumbers)
         {
             return SendKeys(valueInputNumbers);
-        }
-
-        internal static string Open(string locator)
-        {
-            return GetElement(locator).Text;
         }
     }
 }

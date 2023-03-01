@@ -54,7 +54,7 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
 
         public static string GetEmptyCartMessage()
         {
-            return Common.GetEmptyCartMessage(Locators.AddToCart.emptyCartMessage);
+            return Common.GetElementText(Locators.AddToCart.emptyCartMessage);
         }
     }
 }
