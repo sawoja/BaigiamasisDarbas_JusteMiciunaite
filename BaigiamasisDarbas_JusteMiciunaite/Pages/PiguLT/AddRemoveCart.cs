@@ -48,12 +48,13 @@
 
         public static void RemoveItems()
         {
-            Common.WaitForElementVisible(Locators.AddToCart.buttonRemoveItem, 5);
+            Common.WaitForElementToBeInvisible("//*[@class='loader-overlay']", 5);
             Common.ClickElement(Locators.AddToCart.buttonRemoveItem);
         }
 
         public static string GetEmptyCartMessage()
         {
+            Common.WaitForElementVisible(Locators.AddToCart.emptyCartMessage, 5);
             return Common.GetElementText(Locators.AddToCart.emptyCartMessage);
         }
     }

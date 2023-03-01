@@ -1,7 +1,10 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 using System;
+using System.Threading;
 
 namespace BaigiamasisDarbas_JusteMiciunaite
 {
@@ -23,7 +26,7 @@ namespace BaigiamasisDarbas_JusteMiciunaite
         internal static void WaitForElementVisible(string locator, int seconds)
         {
             WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(seconds));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath(locator)));
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(locator)));
         }
 
         internal static void ClickElement(string locator)
@@ -49,6 +52,12 @@ namespace BaigiamasisDarbas_JusteMiciunaite
         internal static string SendKeys(string valueInputNumbers)
         {
             return SendKeys(valueInputNumbers);
+        }
+
+        internal static void WaitForElementToBeInvisible(string locator, int seconds)
+        {
+            WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(seconds));
+            wait.Until(ExpectedConditions.InvisibilityOfElementLocated(By.XPath(locator)));
         }
     }
 }
