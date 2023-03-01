@@ -30,10 +30,6 @@ namespace BaigiamasisDarbas_JusteMiciunaite
             return GetElement(locator).Text;
         }
 
-        public static void JustWait(int HowManySeconds)
-        {
-            Thread.Sleep(HowManySeconds);
-        }
         public static void Remove(string locator)
         {
             GetElement(locator).Click();
