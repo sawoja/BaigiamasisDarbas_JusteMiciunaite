@@ -12,16 +12,14 @@ namespace BaigiamasisDarbas_JusteMiciunaite
             IWebDriver drv = Driver.GetDriver();
             return drv.FindElement(By.XPath(locator));
         }
-        internal static void AllowCookies(string locator)
-        {
-            GetElement(locator).Click();
-        }
+
         internal static void Hoover(string locator)
         {
             var popup = GetElement(locator);
             Actions action = new Actions(Driver.GetDriver());
             action.MoveToElement(popup).Perform();
         }
+
         internal static string WaitForElementVisible(string locator, int seconds)
         {
             WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(seconds));
@@ -43,6 +41,7 @@ namespace BaigiamasisDarbas_JusteMiciunaite
         {
             return GetElement(locator).Text;
         }
+
         internal static void SendKeys(string locator, string message)
         {
             GetElement(locator).SendKeys(message);
