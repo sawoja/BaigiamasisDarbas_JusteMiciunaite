@@ -23,9 +23,9 @@ namespace BaigiamasisDarbas_JusteMiciunaite
             Actions action = new Actions(Driver.GetDriver());
             action.MoveToElement(popup).Perform();
         }
-        internal static string WaitForElementVisible(string locator, int HowManySeconds)
+        internal static string WaitForElementVisible(string locator, int seconds)
         {
-            WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(HowManySeconds));
+            WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(seconds));
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath(locator)));
             return GetElement(locator).Text;
         }
