@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
+﻿namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
 {
     internal class Locators
-
     {
         internal class AddToCart
         {
@@ -21,14 +13,11 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
             internal static string shoppingListNotEmpty = "//*[table[@class='order-table']]";
             internal static string itemQuantity = "//table[@class='order-table']//input[@type='text'][@rel-widget-id[starts-with(.,'productSliceBlock')]]";
             internal static string emptyCartMessage = "//p[contains(.,'Jūsų prekių krepšelis tuščias')]";
-
         }
 
         internal class AllowCookies
         {
             internal static string allowCookies = "//button[@widget-attachpoint='agree']";
-
-
         }
 
         internal class Registration

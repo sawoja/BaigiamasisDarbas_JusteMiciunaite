@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.Extensions;
 using System;
 using System.IO;
 
@@ -13,6 +12,7 @@ namespace BaigiamasisDarbas_JusteMiciunaite
         public static void SetupDriver()
         {
             driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();
         }
 
         public static IWebDriver GetDriver()
@@ -40,6 +40,5 @@ namespace BaigiamasisDarbas_JusteMiciunaite
             Directory.CreateDirectory(screenshotsDirectory);
             screenshot.SaveAsFile(screenshotFilePath, ScreenshotImageFormat.Png);
         }
-
     }
 }

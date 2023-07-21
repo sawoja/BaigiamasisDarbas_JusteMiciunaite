@@ -1,25 +1,19 @@
-﻿using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
 {
     public class RegisterPage
     {
+        public enum RegistrationAction
+        {
+            Register,
+            Login
+        }
 
         public static void Open()
         {
             Driver.OpenUrl("https://pigu.lt/lt/");
-            Common.MaximizeWindow();
-            Common.AllowCookies(Locators.AllowCookies.allowCookies);
-
-
-
+            Common.ClickElement(Locators.AllowCookies.allowCookies);
         }
 
         public static void ClickDashboardButton()
@@ -31,36 +25,46 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
         {
             Common.ClickElement(Locators.Registration.buttonLogin);
         }
-
-        public static void AddEmail(string email, int regway)
+        
+        public static void AddEmail(string email, RegistrationAction action)
         {
-            if (regway == 1)
+            string locator = "";
+
+            switch (action)
             {
-                Common.SendKeys(Locators.Registration.inputEmail, email);
+                case RegistrationAction.Login:
+                    locator = Locators.Registration.inputEmail;
+                    break;
+                case RegistrationAction.Register:
+                    locator = Locators.Registration.inputEmailRegister;
+                    break;
             }
-            else if (regway == 2)
-            {
-                Common.SendKeys(Locators.Registration.inputEmailRegister, email);
-            }
+
+            Common.SendKeys(locator, email);
         }
 
-        public static void AddPassword(string password, int regway)
+        public static void AddPassword(string password, RegistrationAction action)
         {
-            if (regway == 1)
+            string locator = "";
+
+            switch (action)
             {
-                Common.SendKeys(Locators.Registration.inputPassword, password);
-            }
-            else if (regway == 2)
-            {
-                Common.SendKeys(Locators.Registration.inputPasswordRegister, password);
+                case RegistrationAction.Login:
+                    locator = Locators.Registration.inputPassword;
+                    break;
+                case RegistrationAction.Register:
+                    locator = Locators.Registration.inputPasswordRegister;
+                    break;
             }
 
+            Common.SendKeys(locator, password);
         }
 
         public static string RegistrationErrorMessage()
         {
             return Common.GetElementText(Locators.Registration.errorMessage);
         }
+
         public static string RegistrationSuccessMessage()
         {
             return Common.GetElementText(Locators.Registration.messageSuccessfull);
@@ -71,6 +75,7 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
             Common.WaitForElementVisible(Locators.Registration.buttonRegister, 5);
             Common.ClickElement(Locators.Registration.buttonRegister);
         }
+
         public static void ConfirmRegister()
         {
             Common.WaitForElementVisible(Locators.Registration.buttonFinalRegister, 5);
@@ -92,5 +97,9 @@ namespace BaigiamasisDarbas_JusteMiciunaite.Pages.PiguLT
             Common.ClickElement(Locators.Registration.approveButton);
         }
 
+        public static string GenerateEmail()
+        {
+            return $"email{Guid.NewGuid()}@email.com";
+        }
     }
 }
